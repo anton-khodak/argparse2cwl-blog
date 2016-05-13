@@ -71,7 +71,7 @@ It was also interesting to look at argument parsers in context of the popularity
 There are much more `sys.argv` dots than `argparse` dots, though the number of files is pretty close; it means that projects that don't use argument parsers intensively, one or two times per project, tend to use `sys.argv`. It is also more widespread among popular repositories, but I looked through some of them and they tend to use argument parsers in targets others than bio tools which I am supposed to convert.
 
 
-Generally, the statistics show that argparse2cwl project has good chances to be useful for a wide circle of cases. Even though the most popular argument parser is not appropriate for processing, there are more than enought tools which use `argparse`. Nevertheless, the number of usages of other argument parsers is not so insignificant to neglect them, so it would be nice to add their support too.
+In general, the statistics show that argparse2cwl project has good chances to be useful for a wide circle of cases. Even though the most popular argument parser is not appropriate for processing, there are more than enought tools which use `argparse`. Nevertheless, the number of usages of other argument parsers is not so insignificant to neglect them, so it would be nice to add their support too.
 
 
 [pypi]: https://pypi.python.org/pypi?:action=browse&show=all&c=388
