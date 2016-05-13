@@ -1,0 +1,18 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: argparse2cwl blog
+email: anton.khodak@ukr.net
+description: > # this means to ignore newlines until "baseurl:"
+  My Google Summer of Code 2016 blog dedicated to project "Automated tool wrapper/converter for CWL": https://summerofcode.withgoogle.com/projects/#4968352338411520
+baseurl: "/gsoc" # the subpath of your site, e.g. /blog
+url: "http://anton-khodak.github.io" # the base hostname & protocol for your site
+github_username:  anton-khodak
+
+# Build settings
+markdown: kramdown
