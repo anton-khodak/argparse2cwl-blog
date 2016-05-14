@@ -10,8 +10,8 @@ title: argparse2cwl blog
 email: anton.khodak@ukr.net
 description: > # this means to ignore newlines until "baseurl:"
   My Google Summer of Code 2016 blog dedicated to project "Automated tool wrapper/converter for CWL": https://summerofcode.withgoogle.com/projects/#4968352338411520
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://anton-khodak.github.io/argparse2cwl-blog" # the base hostname & protocol for your site
+baseurl: "/argparse2cwl-blog" # the subpath of your site, e.g. /blog
+url: "http://anton-khodak.github.io/" # the base hostname & protocol for your site
 github_username:  anton-khodak
 
 # Build settings

@@ -2,7 +2,7 @@
 layout: post
 title:  "Argument parsers statistics"
 date:   2016-05-13 16:12:27 +0300
-categories: jekyll update
+comments: true
 ---
 Common Workflow Language command line tools mostly consist of input/output parameters descriptions. These descriptions often can be created automatically directly from the code of the actual Python tool. The more information is provided in the source code of the tool, the less has to be written by hand in a CWL tool description. 
 
@@ -17,11 +17,11 @@ After a brief overview I have selected 5 most popular ways to parse command line
 
 #### sys.argv 
 
-Standart module `sys` provides the most straightforward way to parse command line arguments, simply putting all of them into a list, disregardless of their characteristics. This is the the least flexible way to deal with arguments, but due to its simplicity and universality it is very popular
+Standard module `sys` provides the most straightforward way to parse command line arguments, simply putting all of them into a list, disregardless of their characteristics. This is the least flexible way to deal with arguments, but due to its simplicity and universality, it is very popular
 
 #### argparse 
 
-This is a standard module in Python since version 2.7. It has a lot of advantages over its predecessor `optparse`, such as handling positional arguments, supporting sub-commands, producing more informative usage messages. For now it is the most convenient way to obtain information about parameters and to form CWL tool out of it. 
+This is a standard module in Python since version 2.7. It has a lot of advantages over its predecessor `optparse`, such as handling positional arguments, supporting sub-commands, producing more informative usage messages. For now, it is the most convenient way to obtain information about parameters and to form CWL tool out of it. 
 
 #### optparse 
 
@@ -29,13 +29,13 @@ A deprecated but still used module in old projects.
 
 #### docopt 
 
-A library for "creating beautiful command-line interfaces", as claimed by its developers. It uses just a few lines of code to generate a parser, and requires a well-written docstring.
+A library for "creating beautiful command-line interfaces", as claimed by its developers. It uses just a few lines of code to generate a parser and requires a well-written docstring.
 
 #### click 
 
 A library which is considered by some more intuitive, lightweight than argparse and at least as powerful.
 
-I was curious about which libraries are the most wide-spread in bioinformatics community. That's why I wrote a simple program to gather some statistic from github repositories. I parsed a list of bioinformatics repositories from [Python Package Index][pypi], grabbed links to GitHub sources and counted a number of files where each of the above libraries is imported. The source code is available [here][bitbucket].
+I was curious about which libraries are the most wide-spread in the bioinformatics community. That's why I wrote a simple program to gather some statistic from github repositories. I parsed a list of bioinformatics repositories from <a href="https://pypi.python.org/pypi?:action=browse&show=all&c=388">Python Package Index</a>, grabbed links to GitHub sources and counted a number of files where each of the above libraries is imported. The source code is available <a href="https://bitbucket.org/anton-khodak/parser-survey">here</a>.
 
 The results are the following:
 
@@ -64,15 +64,30 @@ The results are the following:
 
 ![My helpful screenshot](/argparse2cwl-blog//assets/bar.png)
 
-So, the most popular argument parsers are the standart libraries: `sys.argv` and `argparse` exceed other libraries by number at least by five times.
+So, the most popular argument parsers are the standard libraries: `sys.argv` and `argparse` exceed other libraries by number at least by five times.
 
-It was also interesting to look at argument parsers in context of the popularity of the repositories. Here is the plot which represents occurences of argument parsers in different repositories regarding the number of their downloads, a dot means the presense of library in a repository. 
+It was also interesting to look at argument parsers in the context of the popularity of the repositories. Here is the plot which represents occurrences of argument parsers in different repositories regarding the number of their downloads, a dot means the presence of a library in a repository. 
 ![My helpful screenshot](/argparse2cwl-blog//assets/scattered.png)
-There are much more `sys.argv` dots than `argparse` dots, though the number of files is pretty close; it means that projects that don't use argument parsers intensively, one or two times per project, tend to use `sys.argv`. It is also more widespread among popular repositories, but I looked through some of them and they tend to use argument parsers in targets others than bio tools which I am supposed to convert.
+There are much more `sys.argv` dots than `argparse` dots, though the number of files is pretty close; it means that projects that don't use argument parsers intensively, one or two times per project, tend to use `sys.argv`. It is also more widespread among popular repositories, but I looked through some of them, and they tend to use argument parsers in targets others than bio tools which I am supposed to convert.
+
+A useful outcome for the project: top 10 repositories which have 'tool' keyword in their descriptions and use argparse.
+<table cellpadding="10" frame="void" rules="all" style="border: 1px solid black;">
+<tr><td>Name</td><td>Description</td><td>Argparse</td><td>Downloads</td></tr>
+<tr><td><a href="https://github.com/mjirik/lisa">lisa</a></td><td>3D data processing toolbox</td><td>36</td> <td>1069</td></tr>
+<tr><td><a href="https://github.com/smdabdoub/phylotoast">phylotoast</a></td><td>Useful additions to the QIIME analysis pipeline including tools for data visualization and cluster-computing.</td><td>25</td> <td>98</td></tr>
+<tr><td><a href="https://github.com/umich-brcf-bioinf/Jacquard">jacquard</a></td><td>Command-line tools to expedite analysis of Variant Call Format (VCF) files.</td><td>14</td> <td>193</td></tr>
+<tr><td><a href="https://github.com/sanger-pathogens/circlator">circlator</a></td><td>circlator: a tool to circularise genome assemblies</td><td>12</td> <td>959</td></tr>
+<tr><td><a href="https://github.com/tdido/tstk">tstk</a></td><td>A bunch of tools for sequencing data analysis</td><td>9</td> <td>83</td></tr>
+<tr><td><a href="https://github.com/mjirik/imtools">imtools</a></td><td>3D data processing toolbox</td><td>6</td> <td>943</td></tr>
+<tr><td><a href="https://github.com/FredHutch/swift-commander">swift-commander</a></td><td>swift commander (swc) is a wrapper to various command line client tools for openstack swift cloud storage systems.</td><td>5</td> <td>199</td></tr>
+<tr><td><a href="https://github.com/gemtools/gemtools">Gemtools</a></td><td>Python support library for the GEM mapper and the gemtools library</td><td>5</td> <td>232</td></tr>
+<tr><td><a href="http://github.com/etal/cnvkit">CNVkit</a></td><td>Copy number variation toolkit for targeted DNA sequencing.</td><td>4</td> <td>1193</td></tr>
+<tr><td><a href="http://github.com/mscook/SeqFindr">SeqFindr</a></td><td>A tool to easily create informative genomic feature plots</td><td>4</td> <td>748</td></tr>
+</table>
+<br>
+In general, the statistics show that argparse2cwl project has good chances to be useful for a wide circle of cases. Even though the most popular argument parser is not appropriate for processing, there are more than enough tools which use `argparse`. Nevertheless, the number of usages of other argument parsers is not so insignificant to neglect them, so it would be nice to add their support too.
 
 
-Generally, the statistics show that argparse2cwl project has good chances to be useful for a wide circle of cases. Even though the most popular argument parser is not appropriate for processing, there are more than enought tools which use `argparse`. Nevertheless, the number of usages of other argument parsers is not so insignificant to neglect them, so it would be nice to add their support too.
+{% include disqus.html %}
 
 
-[pypi]: https://pypi.python.org/pypi?:action=browse&show=all&c=388
-[bitbucket]: https://bitbucket.org/anton-khodak/parser-survey
