@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Argument parsers statistics"
-date:   2016-05-13 16:12:27 +0300
+date:   2016-05-16 14:12:27 +0300
 comments: true
 ---
 <a href="http://www.commonwl.org/">Common Workflow Language</a> <a href="http://www.commonwl.org/draft-3/CommandLineTool.html">command line tools</a> mostly consist of input/output parameters descriptions. These descriptions could be created automatically and directly from the code of the actual Python tool. The more information is provided in the source code of the tool, the less has to be written by hand in a CWL tool description. 
