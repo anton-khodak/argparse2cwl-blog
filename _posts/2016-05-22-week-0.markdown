@@ -6,9 +6,9 @@ comments: true
 ---
 This is my first blog post about the work progress. 
 
-The first week was somewhat introductory, the official work period hasn't started yet, so I worked around 2-3 hours a day in my own pace, and the result of my work is the following [commit](https://github.com/common-workflow-language/gxargparse/pull/3/commits/9a187fce87dae23913d2c8542071cc8ae3d08cfe). I started forming CWL wrappers from [CNVkit](https://github.com/etal/cnvkit/tree/f5b11882d68bb8d2236e3142d6ce297206b2b075), added new basic parameter types, `argparse` actions, improved `jinja2` templates. So far everything goes well, I didn't encounter any major difficulties, however the [most interesting](https://github.com/etal/cnvkit/blob/master/cnvlib/commands.py) part is ahead.
+The first week was somewhat introductory, the official work period hasn't started yet, so I worked around 2-3 hours a day at my own pace, and the result of my work is the following [commit](https://github.com/common-workflow-language/gxargparse/pull/3/commits/9a187fce87dae23913d2c8542071cc8ae3d08cfe). I started forming CWL wrappers from [CNVkit](https://github.com/etal/cnvkit/tree/f5b11882d68bb8d2236e3142d6ce297206b2b075), added new basic parameter types, `argparse` actions, improved `jinja2` templates. So far everything goes well, I didn't encounter any major difficulties, however the [most interesting](https://github.com/etal/cnvkit/blob/master/cnvlib/commands.py) part is ahead.
 
-On the next week I plan to start full-time work and get close to 35-40 hours a week, working 4-5 hours on working days and 7-8 on weekends.
+On the next week, I plan to start full-time work and get close to 35-40 hours a week, working 4-5 hours on working days and 7-8 on weekends.
 I intend to finish automated wrapping for CNVkit and continue covering new argparse API. Besides, there is an interesting topic I would like to write a post about later: showing which CWL concepts can be covered by argparse and which not. This post will then serve as a guide for people who write tools from the start, so their CWL wrappers contain as much automatically parsed information as possible. I will write some thoughts on it in the next week report.
 
 {% include disqus.html %}
