@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "Week 1. May 23 - May 29"
+date:   2016-05-29 19:12:27 +0300
+comments: true
+---
+This was the first official week of the work period in GSoC. On this week I finished wrapping tools from CNVkit, (all of them)[https://github.com/common-workflow-language/gxargparse/tree/dev/test/cnvkit-tools] passed validation. However, I didn't run them with actual arguments, so unexpected outcomes still possible. (Specifically)[https://github.com/common-workflow-language/gxargparse/pull/5], I did the following:
+
+* added the ability to wrap either multiple tools at once (if there are subparsers) or particular ones;
+* added prefixes, optional inputs to templates;
+* added support for `nargs` and `choices` option, `store_true` and `store_false` actions.
+
+There are some points I would like to mention:
+
+* I start thinking about testing. For testing CNVkit wrappers I wrote a small bash script, but that's clearly not the way it is supposed to happen. `cwltool` allows to import itself as a module, but I didn't figure out how to use its functions to validate tools. Perhaps, a small layer between `cwltool` and `argparse2cwl` should be written for that purpose.
+* There are some concepts in `argparse` that can not be ported to CWL, like `metavar` option or argument grouping, but those are not very important; some essential concepts I faced the need to interpret are optional arguments and `nargs=N` option. Optional arguments exist in CWL, but the way they are described is not as plain as it could be, and the community is (already working)[https://github.com/common-workflow-language/common-workflow-language/issues/221] on changing it; and the number of arguments can not be specified, that's what might be improved in the standard.
+* There are some features that are not covered by `argparse` but are present in CWL, like `separate` option for prefixes. Some of them can be specified in the command line when building CWL wrapper, I already have two which specify base command and a directory for saving wrappers, and there can be a lot more. I have to write my own CLI for parsing those options.
+
+On the next week, I plan to continue covering `argparse` API with a new tool set, write a CLI for specifying argparse2cwl options and find a way for testing wrappers inside Python code, without using the command line.
+  
+
+{% include disqus.html %}
+
