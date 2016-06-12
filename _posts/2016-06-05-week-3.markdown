@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "Week 2. May 30 - June 5"
+date:   2016-06-05 22:12:27 +0300
+comments: true
+---
+This week was not as productive as I wanted because I had several tough deadlines in the university and I had to cope with that, luckily I successfully passed an exam and presented a coursework. In my proposal I mentioned a two week period of exams, when I might work less, this week may be counted as one of the two. The next week is not going to be easy also, but I will definitely have more time and will work as planned.
+
+Nevertheless, I managed to start/complete the following points:
+
+* I started a [pull request](https://github.com/common-workflow-language/workflows/pull/93) to [workflows](https://github.com/common-workflow-language/workflows) repository with my automatically wrapped CNVkit tools. I requested for help with testing data, perhaps I had to be more insistent. The next week I am going to get a successful check from repository's Travis CI, for now I just lack proper data.
+
+* I [changed](https://github.com/common-workflow-language/gxargparse/pull/8) the structure of templates so that they can be divided into smaller parts, that's definitely a need because Jinja2 templates look unreadable when there's a lot of code in one file. It allowed me to add an option of plugging hand-written outputs to a formed CWL tool, which might be useful when argparse2cwl can't recognize output arguments. I also need to test an option with forming outputs considering "output" keyword in the name of an argument.
+
+* I rewrote interface to argparse2cwl, now a user can get information about a2c arguments with passing `-ha` or `--help_arg2cwl` option to any tool he/she wants to wrap. I also think about making a standalone instrument, so calling argparse2cwl will look not like `$ python <tool name> --generate_cwl_tool`, but like `$ arg2cwl python <tool name>`. It will be a little more explicit way of working with our program; also it will allow to specify usual `-h` for getting help.
+
+* I made a dead simple test for checking the general program running process. Regarding testing, there are two parts of what should be tested: the Python code that I wrote and CWL tools which are produced on the output. The first part is not easy, actually it is a large part of the project, but at least it is clear what to do. Testing tools, on the contrary, is a very tricky part. For now, I can only assure the syntax of the formed tool doesn't violate the standard, and only by running `cwl-runner` from the command line (I can not import `cwltool`, because it doesn't support Python3, as far as I know). I don't have tests for checking whether executing jobs with CWL tools produces the same result as running tools without wrappers. I need test data for creating jobs, and that is where I need community's help; I can do it alone, but it will take a lot of time in questions where someone competent can instantly show me where to find what I need.
+
+To sum up, on the next week I will bring my PR to a working state, cover some small parts in argparse API and make some changes to CWL tool forming, but mainly I will concentrate on testing code that I wrote.
+  
+{% include disqus.html %}
+
