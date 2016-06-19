@@ -1,0 +1,28 @@
+---
+layout: post
+title:  "Week 4. June 13 - June 19"
+date:   2016-06-20 01:27:27 +0300
+comments: true
+---
+This week was dedicated to covering [the rest](https://docs.google.com/document/d/1CPcm4GLSMo4TWJYVlpIVP1Kup___6Se_DVnk73hIe8E/edit?usp=sharing) of the remaining argparse API, finishing tests, cleaning up the code, writing documentation. The resulting commits are appended to the previous [pull request](https://github.com/common-workflow-language/gxargparse/pull/9). Briefly: 
+
+* Covered `parents`, `prefix-chars` option, `_StoreConstAction`, `File` inputs, wrote tests. 
+
+* Fixed various bugs.
+
+* Refactored the code and wrote comments. 
+
+* Wrote a draft of [release notes / user guide](). 
+
+`argparse2cwl` project seems to be ready for release, after mentor review and comments I am going to present it to the community.
+
+We have discussed future plans with my mentors @brainstorm and @mr-c and as a result of brainstorming several ideas for the next 6 weeks came up:
+
+1. pypi2cwl: forming CWL tool descriptions straight from a given PyPi repository with both command-line- and web-version.
+2. cwl2argparse: generating argparse code from CWL tool descriptions.
+3. cmdline2cwl: forming CWL tool descriptions from programs which use other argument parsers than argparse, preferably `click` and `docopt`/`optparse`. Unfortunately, I don't see valuable practical opportunities to form CWL tools from programs which use pure `sys.argv`.
+
+The next week I start working on `pypi2cwl`, also getting feedback from `argparse2cwl` and fixing possible problems there.
+  
+{% include disqus.html %}
+
