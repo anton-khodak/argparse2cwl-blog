@@ -16,7 +16,7 @@ This week was dedicated to covering [the rest](https://docs.google.com/document/
 
 `argparse2cwl` project seems to be ready for release, after mentor review and comments I am going to present it to the community.
 
-We have discussed future plans with my mentors @brainstorm and @mr-c and as a result of brainstorming several ideas for the next 6 weeks came up:
+We have discussed plans for the future with my mentors [@brainstorm](https://github.com/brainstorm) and [@mr-c](https://github.com/mr-c) and as a result of brainstorming [several ideas](https://docs.google.com/document/d/1y29khl9HzQy6XrL9t-IQFr_GcIZ6cOvFfLysHZ1Xqo0/edit?usp=drive_web&usp=docs_home) for the second half of GSoC came up:
 
 1. pypi2cwl: forming CWL tool descriptions straight from a given PyPi repository with both command-line- and web-version.
 2. cwl2argparse: generating argparse code from CWL tool descriptions.
