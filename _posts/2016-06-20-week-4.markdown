@@ -12,7 +12,7 @@ This week was dedicated to covering [the rest](https://docs.google.com/document/
 
 * Refactored the code and wrote comments. 
 
-* Wrote a draft of [release notes / user guide](). 
+* Wrote a draft of [release notes / user guide](https://github.com/anton-khodak/argparse2cwl-blog/pull/1/files). 
 
 `argparse2cwl` project seems to be ready for release, after mentor review and comments I am going to present it to the community.
 
