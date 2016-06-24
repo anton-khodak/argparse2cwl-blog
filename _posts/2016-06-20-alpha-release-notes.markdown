@@ -6,36 +6,43 @@ comments: true
 ---
 
 `argparse2cwl` forms CWL tool descriptions from programs which use `argparse` as their argument parser. 
+You can write use your normal import
 
-## Prerequisites ##
-`argparse2cwl` is compatible with both Python 2 & 3.
-Dependencies:
-* Jinja2 >= 2.8
+	import argparse
+
+and continue writing code. All functions are passed straight through to `argparse`, but `argparse2cwl` captures them and copies some information along the way. This information captured is used to produce CWL tool definition when it's requested with the `--generate_cwl_tool` flag.
+
 
 ## Installing ##
 
-Installation process:
-
-1. Clone the source repository:
+Run 
 	
-	```$ git clone https://github.com/common-workflow-language/gxargparse.git ```  
+	$ pip install argparse2cwl --extra-index-url https://testpypi.python.org/pypi
 
-2. Change directory to the root folder of the project and switch to `cwl-refactor` branch:
+You can ensure it's working when you pass `--help_arg2cwl` flag to any command-line program inside your environment. If the option is not recognized, try
+	
+	$ gxargparse_check_path
 
-	```$ git checkout origin/cwl-refactor```
+which is installed as part of this package. It will fix the paths or produce a helpful error message if the paths are incorrectly ordered.
 
-3. Run 
-
-	```
-	   $ python setup.py install
-	   $ gxargparse_check_path 
-	```
 
 ## Running ##
 
 To run `argparse2cwl`, call your tool as usually without actual arguments with `--generate_cwl_tool` option:
 
-	$ python cnvkit.py batch --generate_cwl_tool
+	$ python <tool command> --generate_cwl_tool <other options>
+
+Example for [CNVkit](https://github.com/etal/cnvkit) toolkit:
+
+	$ python cnvkit.py batch --generate_cwl_tool -d ~/cnvkit-tools/ --generate_outputs
+
+
+If there are subcommands in the provided command, all possible tools will be generated, for instance, for CNVkit
+
+	$ python cnvkit.py --generate_cwl_tool
+
+will produce CWL tool descriptions for `cnvkit.py batch`, `cnvkit.py access`, `cnvkit.py export bed`, `cnvkit.py export cdt` and all other subcommands.
+
 
 Other options (which work only with `--generate_cwl_tool` provided, except for help message) are:
 
@@ -52,7 +59,9 @@ Basecommand of the formed tool will be `['python']`, and `search` will be a posi
 
 * `-d`, `--directory`: directory for storing tool descriptions.
 
-* `--help_arg2cwl`: prints help message.
+* `--help_arg2cwl`: prints this help message.
+
+
 
 ## Argparse notes ##
 
