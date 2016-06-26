@@ -6,7 +6,7 @@ comments: true
 ---
 
 `argparse2cwl` forms CWL tool descriptions from programs which use `argparse` as their argument parser. 
-You can write use your normal import
+No code changes are required, just use the normal import:
 
 	import argparse
 
