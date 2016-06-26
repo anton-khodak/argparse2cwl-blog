@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "Week 5. June 20 - June 26"
+date:   2016-06-26 23:15:27 +0300
+comments: true
+---
+On this week I finally [uploaded](https://testpypi.python.org/pypi/argparse2cwl/0.1.4) a test version of `argparse2cwl` to TestPyPi and updated documentation according to mentors' comments. Installation instructions can be found [here](https://github.com/anton-khodak/argparse2cwl-blog/blob/ed5825708e1ab2199c99eca0bcc710a1b6df2fd6/_posts/2016-06-20-alpha-release-notes.markdown). 
+
+Also, I have started working on `pypi2cwl`, I made a first working [prototype](https://github.com/common-workflow-language/gxargparse/commit/c9d9f44c5c80621114787ced7810ec2272dde0a1) which generates tool definitions from [phylotoast](https://pypi.python.org/pypi/phylotoast). It installs PyPi package on client's computer, (downloads) GitHub repo to obtain scripts which are converted and runs `argparse2cwl` against those scripts storing generated tools in a user-defined directory. 
+
+The next week I continue working on `pypi2cwl`. There is a bunch of tasks I need to implement, for instance, `--no-install` option which removes package after tool generation, proper GitHub repository downloading, tools which are not installed as scripts (not placed to `/usr/local/bin/`), thus need another approach, some tests. I hope to finish a command-line version till the end of the week. 
+  
+{% include disqus.html %}
+
