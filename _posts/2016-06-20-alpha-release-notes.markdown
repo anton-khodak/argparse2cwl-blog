@@ -27,13 +27,13 @@ Installation process:
 
 3. Run 
 
-		$ python3 setup.py install
+		$ python setup.py install
 
 You can ensure it's working when you pass `--help_arg2cwl` flag to any command-line program inside your environment. If the option is not recognized, try
 	
 	$ gxargparse_check_path
 
-which is installed as part of this package. It will produce a helpful error message if the paths are incorrectly ordered.
+which is installed as part of this package. It will produce a helpful error message if the paths are incorrectly ordered. Also make sure you have installed it under proper Python version.
 
 
 ## Running ##
