@@ -15,31 +15,45 @@ and continue writing code. All functions are passed straight through to `argpars
 
 ## Installing ##
 
-Run 
+Installation process:
+
+1. Clone the source repository:
 	
-	$ pip install argparse2cwl --extra-index-url https://testpypi.python.org/pypi
+		$ git clone https://github.com/common-workflow-language/gxargparse.git
+
+2. Change directory to the root folder of the project and switch to `cwl-refactor` branch:
+
+		$ git checkout origin/cwl-refactor
+
+3. Run 
+
+		$ python3 setup.py install
 
 You can ensure it's working when you pass `--help_arg2cwl` flag to any command-line program inside your environment. If the option is not recognized, try
 	
 	$ gxargparse_check_path
 
-which is installed as part of this package. It will fix the paths or produce a helpful error message if the paths are incorrectly ordered.
+which is installed as part of this package. It will produce a helpful error message if the paths are incorrectly ordered.
 
 
 ## Running ##
 
 To run `argparse2cwl`, call your tool as usually without actual arguments with `--generate_cwl_tool` option:
 
-	$ python <tool command> --generate_cwl_tool <other options>
+	$ <tool command> --generate_cwl_tool <other options>
+
+Simple example
+	
+	$ python example.py --generate_cwl_tool
 
 Example for [CNVkit](https://github.com/etal/cnvkit) toolkit:
 
-	$ python cnvkit.py batch --generate_cwl_tool -d ~/cnvkit-tools/ --generate_outputs
+	$ cnvkit.py batch --generate_cwl_tool -d ~/cnvkit-tools/ --generate_outputs
 
 
 If there are subcommands in the provided command, all possible tools will be generated, for instance, for CNVkit
 
-	$ python cnvkit.py --generate_cwl_tool
+	$ cnvkit.py --generate_cwl_tool
 
 will produce CWL tool descriptions for `cnvkit.py batch`, `cnvkit.py access`, `cnvkit.py export bed`, `cnvkit.py export cdt` and all other subcommands.
 
