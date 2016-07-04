@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "Week 6. June 27 - July 3"
+date:   2016-07-04 18:26:27 +0300
+comments: true
+---
+On this week I have finished an alpha-version of `pypi2cwl`. The code can be found [here](https://github.com/common-workflow-language/gxargparse/tree/pypi2cwl/pypi2cwl) . Brief documentation can be found [here](https://github.com/anton-khodak/argparse2cwl-blog/blob/pypi2cwl-draft/_posts/2016-07-04-pypi2cwl-readme.markdown). 
+
+What I changed is:
+
+* added package downloading (in the prototype made by hand) 
+
+* adjusted the process for both global and virtual environments
+
+* refactored and added comments
+
+What remains is writing tests and generating a pull request to the CWL repository for a review and to make tool descriptions publicly available. Although to my mind maybe it would be better for packages' contributors to publish CWL tool descriptions in their own repositories, to keep the entire toolkits incapsulated.
+
+The next week I start working on a web-version of `pypi2cwl`. The goal of this subproject should be clarified, but as was discussed in [post-midterm ideas](https://docs.google.com/document/d/1y29khl9HzQy6XrL9t-IQFr_GcIZ6cOvFfLysHZ1Xqo0/edit?ts=57629de6#heading=h.ehoizk4gbg1n), the desired outcome should be similar to the one [http://pythonwheels.com](http://pythonwheels.com) has.
+  
+{% include disqus.html %}
+
