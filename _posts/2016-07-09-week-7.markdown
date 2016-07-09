@@ -4,7 +4,7 @@ title:  "Week 7. July 4 - July 10"
 date:   2016-07-09 14:38:27 +0300
 comments: true
 ---
-On this week I have fixed a bunch of bugs from `pypi2cwl`, [the commit](https://github.com/common-workflow-language/gxargparse/commit/e5ab26d63be7797ae144fbf0026c83752bd61a0b)
+On this week I have fixed a bunch of bugs from `pypi2cwl`, [the commit](https://github.com/common-workflow-language/gxargparse/commit/e5ab26d63be7797ae144fbf0026c83752bd61a0b).
 
 In short:
 
@@ -16,7 +16,7 @@ In short:
 
 * refactoring, updated comments and help messages
 
-Also I have started working on the second subproject from post-midterm plan - `cwl2argparse`. I have made a working prototype, which generates argparse code from some of the model tools from [workflows](https://github.com/common-workflow-language/workflows). The source code is available [here](https://github.com/anton-khodak/cwl2argparse/commit/cb55ef8264f3b9ae5abb20aefc3e946acb202120), brief documentation in the README of the [repository](https://github.com/anton-khodak/cwl2argparse).
+Then I have started working on the second subproject from post-midterm plan - `cwl2argparse`. I have made a working prototype, which generates argparse code from some of the model tools from [workflows](https://github.com/common-workflow-language/workflows). The source code is available [here](https://github.com/anton-khodak/cwl2argparse/commit/cb55ef8264f3b9ae5abb20aefc3e946acb202120), brief documentation in the README of the [repository](https://github.com/anton-khodak/cwl2argparse).
 
 
 The next week I finish working on `cwl2argparse`: full `argparse` API coverage, some tests, pretty formatting. Also, I will be ready to proceed with a web-version of `pypi2cwl` or improving the command-line version.
