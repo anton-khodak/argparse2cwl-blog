@@ -1,0 +1,41 @@
+---
+layout: post
+title:  "Week 8. July 11 - July 17"
+date:   2016-07-18 23:58:27 +0300
+comments: true
+---
+On this week I have updated `argparse2cwl` taking into account latest CWL [upgrades](http://www.commonwl.org/v1.0/).
+
+Added an ability to generate tools with a new CWL syntax denoted by the map<> syntax. Example: inputs contains a list of items, each with an id. Now one can specify a mapping of that identifier by passing `--map_ids` option along with `--generate_cwl_tool`.
+So, 
+
+```
+inputs:
+ - id: one
+   type: string
+   doc: First input parameter
+ - id: two
+   type: int
+   doc: Second input parameter
+```
+
+will become
+
+```
+inputs:
+ one:
+  type: string
+  doc: First input parameter
+ two:
+  type: int
+  doc: Second input parameter
+
+```
+
+[Pull request](https://github.com/common-workflow-language/gxargparse/pull/12)
+
+Regarding `cwl2argparse`, I have added `store_true/false` actions, `choices` argument, and also made available CWL-to-Python conversion with mapped ids. The source code is available [here](https://github.com/anton-khodak/cwl2argparse/commit/74e28222084c6ca01dec9babe946cd2fee245c39).
+
+
+The next week I start working on extending `argparse2cwl` functionality to a more generic `cmdline2cwl` tool by making available to generate CWL tools from programs which use `click` or `optparse` as their argument parser. As it was shown in a [short statistics](https://anton-khodak.github.io/argparse2cwl-blog/2016/05/16/argument-parsers.html), it is also an actual task.
+{% include disqus.html %}
