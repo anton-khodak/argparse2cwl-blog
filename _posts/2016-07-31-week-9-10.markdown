@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "Weeks 9-10. July 18 - July 31"
+date:   2016-07-31 15:35:27 +0300
+comments: true
+---
+On these weeks I have been working on extending `argparse2cwl` to a more generic `cmdline2cwl` interface so that argument parsers other than `argparse` can be easily plugged in without duplicating the existent functionality, and applying this interface to [`click`](http://click.pocoo.org/5/) argument parser. In particular, I made the following:
+
+* created a separate package `cmdline2cwl` where I moved templates, `cwltool.py`, `argparse2cwl` options parser, package loading function
+* simplified `cwltool.py` class structure, inherited from `argparse_galaxy_translation`
+* built an alpha version of `click2cwl`, which supports multiple commands (`@click.command()` and `@click.group()`), all `click` types, arguments and options
+* tested the alpha version on [`genmod`](https://github.com/moonso/genmod) tools, [examples](https://github.com/common-workflow-language/gxargparse/tree/click/examples/click/genmod-tools)
+
+[Pull request](https://github.com/common-workflow-language/gxargparse/pull/14/) with all the commits.
+
+Besides `click2cwl`, I have updated [cwl2argparse](https://github.com/common-workflow-language/cwl2argparse/). Now generated code is placed inside a function with the same name as the CWL tool. The function returns an `ArgumentParser` object with all the arguments added. A developer can just import that function, invoke it and run `parse_args()` whenever he needs. Also, I eliminated conflicting prefixes problem and pushed the project to PyPi. [Commits](https://github.com/common-workflow-language/cwl2argparse/commits/master): 
+
+In addition, I moved `pypi2cwl` code to a [separate repo](https://github.com/common-workflow-language/pypi2cwl) and uploaded it to PyPi too, so now it can be installed via `pip` separately from `argparse2cwl`. 
+
+The next week I finish working on `click2cwl`: cover the rest of click's API and add tests. Also, I am completely ready to announce `argparse2cwl`, `pypi2cwl`, `cwl2argparse` projects, I just would like @mr-c or @brainstorm to merge `argparse2cwl` code into master branch (or to give me the green light to do so) and test a little its installation and executing process to ensure it all runs smoothly. 
+{% include disqus.html %}
