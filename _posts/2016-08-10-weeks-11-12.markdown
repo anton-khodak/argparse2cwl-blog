@@ -1,0 +1,25 @@
+---
+layout: post
+title:  "Weeks 11-12. August 1 - August 14"
+date:   2016-08-10 20:35:27 +0300
+comments: true
+---
+On these weeks I have been finishing working on `click2cwl`. In particular, I added the following:
+
+* tests and fixes for bugs revealed by testing
+* update `jinja2` templates to `CWL v1.0`
+* support for multiple types and boolean flags
+
+[Pull request](https://github.com/common-workflow-language/gxargparse/pull/14#commits-pushed-81f5cff) with an anchor to the latest commits.
+
+Besides *click2cwl*, I have updated [cwl2argparse](https://github.com/common-workflow-language/cwl2argparse/) considering my mentor's [comments](https://github.com/common-workflow-language/cwl2argparse/issues?q=is%3Aissue+is%3Aclosed+author%3Amr-c). Changes include:
+
+*  `-q/--quiet` option to suppress redundant output
+* adding confirmation for overriding existing files
+* updating CWL parser to `v1.0`
+* fixing missing dependencies and Python 2 issues
+
+[Commits](https://github.com/common-workflow-language/cwl2argparse/commits/master).
+
+In general, I have completed everything I planned to do regarding all [subprojects of the second GSoC half](http://blogs.nopcode.org/brainstorm/2016/06/16/gsoc-2016-post-midterm). Ahead is a post-production period of getting users' feedback, tracking issues and fixing possible bugs. 
+{% include disqus.html %}
