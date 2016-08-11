@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Introduction to CWL generating tools"
-date:   2016-08-11 09:15:27 +0300
+date:   2016-08-11 17:43:27 +0300
 comments: true
 ---
 This post is an overview and quick start for the tools that were developed in this GSoC 2016 project. All the subprojects are aimed to spread [Common Workflow Language](commonwl.org) more widely in the developer community by making porting Python tools to CWL easier, with less amount of routine job. 
