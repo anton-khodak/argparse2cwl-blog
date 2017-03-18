@@ -4,7 +4,7 @@ title:  "CWL week in London"
 date:   2017-03-17 18:44:27 +0300
 comments: true
 ---
-After the successful completion of my GSoC projects, I was invited to meet my mentors Michael R. Crusoe and Roman Valls Guimera and attend CWL work session that took place in London from the 1st to the 4th November 2016. I was thrilled with this opportunity, and though it took quite a while for me to organize this journey (my first single voyage abroad), it was undoubtfully worth it. 
+After the successful completion of my GSoC projects, I had been invited to meet my mentors Michael R. Crusoe and Roman Valls Guimera on the CWL work session that took place in London from the 1st to the 4th November 2016. I was thrilled by this opportunity, and though it took quite a while for me to organize this journey (my first single voyage abroad), it was undoubtfully worth it. 
 
 I arrived in London a little earlier to take part in [Mozilla Festival 2016](https://mozillafestival.org/) together with Roman. On the festival, I presented my summer projects to people from bioinformatics community who participated in Mozfest's [Open Science Fair](https://app.mozillafestival.org/#_space-open-science).
 
@@ -13,11 +13,10 @@ The CWL week started a day later. The attendees were me, Michael, Roman, Janko S
 Overall, it was a highly intensive and productive hackathon. I was very happy to meet my mentors and other people from the CWL community in person and to work with them for these few days. I could not imagine a better finish of my Google Summer of Code 2016 participation!
 
 ![Me with my mentors Michael R. Crusoe and Roman Valls Guimera][photo]
-*That happy! :)*
 
-[photo]: {{site.url}}/assets/london.jpg
+[photo]: /argparse2cwl-blog/assets/london.jpg
 
-P.S. A year after, I became a mentor on a CWL project myself! Check the idea here: [CWL reference implementation (cwltool) idea](https://obf.github.io/GSoC/ideas/#cwl-reference-implementation-cwltool).
+P.S. A year after, I became a mentor on a CWL project myself! Check the idea here: [CWL reference implementation](https://obf.github.io/GSoC/ideas/#cwl-reference-implementation-cwltool).
 
 P.P.S. Special thanks to [Open Bioinformatics Foundation](https://www.open-bio.org/wiki/Main_Page) for awarding me with the travel fellowship and reimbursing with that a significant part of my travel expenses.
 
