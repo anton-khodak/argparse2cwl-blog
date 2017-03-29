@@ -4,7 +4,7 @@ title:  "CWL week in London"
 date:   2017-03-17 18:44:27 +0300
 comments: true
 ---
-After the successful completion of my GSoC projects, I had been invited to meet my mentors [Michael R. Crusoe](https://orcid.org/0000-0002-2961-9670) and [Roman Valls Guimera](https://se.linkedin.com/in/romanvg) for the CWL work session that took place in London from the 1st to the 4th November, 2016. I was thrilled by this opportunity, and though it took quite a while for me to organize this journey (my first solo voyage abroad), it was undoubtfully worth it. 
+After the successful completion of my GSoC projects, I had been invited to meet my mentors [Michael R. Crusoe](https://orcid.org/0000-0002-2961-9670) and [Roman Valls Guimera](https://se.linkedin.com/in/romanvg) for the CWL work session that took place in London from the 1st to the 4th of November, 2016. I was thrilled by this opportunity, and though it took quite a while for me to organize this journey (my first solo voyage abroad), it was undoubtfully worth it. 
 
 I arrived in London a little earlier to take part in [Mozilla Festival 2016](https://mozillafestival.org/) together with Roman. At the festival, I presented my summer projects to people from the bioinformatics community who participated in Mozfest's [Open Science Fair](https://app.mozillafestival.org/#_space-open-science).
 
